@@ -6,6 +6,7 @@ $errors = array();
 
 $converter = new RomanNumeralGenerator();
 
+// Check for form inputs, the class handle the exceptions
 if (isset($_POST["intToRoman"]) && $_POST["intToRoman"] !== "") {
   try {
     $results["intToRoman"] = $converter->generate((integer) $_POST["intToRoman"]);
